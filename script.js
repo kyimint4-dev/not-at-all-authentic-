@@ -32,8 +32,8 @@ nfcTapArea.addEventListener('click', () => {
 });
 
 function showVerificationModal() {
-    document.getElementById('modalProduct').textContent = 'Not At All Edition';
-    document.getElementById('modalSerial').textContent = 'NAA-2026-001';
+    document.getElementById('modalProduct').textContent = 'RE Edition';
+    document.getElementById('modalSerial').textContent = 'RE -2026-001';
     document.getElementById('modalTime').textContent = 'Just now';
     verifyModal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -90,4 +90,4 @@ setTimeout(() => {
     addToHistory();
 }, 2000);
 
-console.log('🔐 Not At All Authentication System Ready');
+console.log('🔐 RE Authentication System Ready');
