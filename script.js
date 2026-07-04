@@ -33,7 +33,7 @@ nfcTapArea.addEventListener('click', () => {
 
 function showVerificationModal() {
     document.getElementById('modalProduct').textContent = 'RE Edition';
-    document.getElementById('modalSerial').textContent = 'RE -2026-001';
+    document.getElementById('modalSerial').textContent = 'RE-2026-001';
     document.getElementById('modalTime').textContent = 'Just now';
     verifyModal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -59,12 +59,14 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.getElementById('zoomBtn').addEventListener('click', () => {
-    const img = document.querySelector('.product-silhouette');
-    img.style.transform = 'scale(1.5)';
-    img.style.transition = 'transform 0.3s ease';
-    setTimeout(() => {
-        img.style.transform = 'scale(1)';
-    }, 600);
+    const img = document.querySelector('.product-image-placeholder img');
+    if (img) {
+        img.style.transform = 'scale(1.5)';
+        img.style.transition = 'transform 0.3s ease';
+        setTimeout(() => {
+            img.style.transform = 'scale(1)';
+        }, 600);
+    }
 });
 
 function addToHistory() {
