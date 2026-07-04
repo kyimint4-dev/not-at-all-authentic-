@@ -251,7 +251,7 @@ body {
     position: relative;
     padding: 10px;
     background: var(--dark-gray);
-    min-height: 150px;
+    min-height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,7 +260,7 @@ body {
 .product-image-placeholder {
     position: relative;
     width: 100%;
-    height: 140px;
+    height: 240px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,11 +269,10 @@ body {
     overflow: hidden;
 }
 
-.product-image-placeholder img {
-    max-width: 70%;
-    max-height: 70%;
-    object-fit: contain;
-    border-radius: 8px;
+.product-image-placeholder canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
 }
 
 .image-overlay {
@@ -286,6 +285,8 @@ body {
     position: absolute;
     top: 16px;
     right: 16px;
+    display: flex;
+    gap: 8px;
 }
 
 .action-btn {
@@ -562,10 +563,12 @@ body {
     .detail-item { padding: 10px 12px; }
     .detail-value { font-size: 13px; }
     .product-logo-svg { width: 40px; height: 40px; }
+    .product-image-placeholder { height: 180px; }
 }
 
 @media (min-width: 768px) {
     .main-container { max-width: 600px; padding: 40px 40px 60px; }
     .hero-title { font-size: 48px; }
     .nfc-tap-area { width: 200px; height: 200px; }
+    .product-image-placeholder { height: 300px; }
 }
