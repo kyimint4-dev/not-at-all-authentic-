@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Not At All - Authentication</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Authenticating...</div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container" id="mainContainer">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-icon">◆</div>
+                <span class="logo-text">NOT AT ALL</span>
+            </div>
+            <div class="header-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Live</span>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-badge">✦ NFC Authenticated</div>
+            <h1 class="hero-title">Premium Product<br><span class="highlight">Verification</span></h1>
+            <p class="hero-subtitle">Tap your NFC tag to verify authenticity instantly</p>
+            
+            <div class="nfc-tap-area" id="nfcTapArea">
+                <div class="nfc-pulse"></div>
+                <div class="nfc-icon">📱</div>
+                <span class="nfc-text">Tap to Verify</span>
+                <span class="nfc-subtext">or scan QR code</span>
+            </div>
+        </section>
+
+        <!-- Product Card -->
+        <div class="product-card" id="productCard">
+            <div class="card-header">
+                <span class="card-badge">✓ Verified</span>
+                <span class="card-date" id="scanDate">Scan Date: --</span>
+            </div>
+            
+            <div class="product-image-container">
+                <div class="product-image-placeholder">
+                    <!-- 👇 Product Image နေရာ -->
+                    <img src="Not At All.jpeg" alt="Not At All Product" style="width:100%; height:100%; object-fit:cover;">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="image-actions">
+                    <button class="action-btn" id="zoomBtn">🔍</button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h2 class="product-name" id="productName">Not At All Edition</h2>
+                <p class="product-description" id="productDesc">Limited Edition Streetwear Collection</p>
+                
+                <div class="product-details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Serial Number</span>
+                        <span class="detail-value" id="serialNumber">NAA-2026-001</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Collection</span>
+                        <span class="detail-value" id="collection">FW '26</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Size</span>
+                        <span class="detail-value" id="size">M</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Color</span>
+                        <span class="detail-value" id="color">Black</span>
+                    </div>
+                </div>
+
+                <div class="authentication-status">
+                    <div class="auth-check">
+                        <span class="check-icon">✓</span>
+                        <span>Authentic Product</span>
+                    </div>
+                    <div class="auth-check">
+                        <span class="check-icon">🔒</span>
+                        <span>Blockchain Verified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scan History -->
+        <div class="scan-history">
+            <h3 class="history-title">📋 Scan History</h3>
+            <div class="history-list" id="historyList">
+                <div class="history-item">
+                    <span class="history-date">Today, 14:32</span>
+                    <span class="history-status">✓ First Scan</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">Today, 10:15</span>
+                    <span class="history-status">✓ Verified</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Not At All. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Support</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Verification Modal -->
+    <div class="modal" id="verifyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Verification Status</h2>
+                <button class="modal-close" id="modalClose">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="verification-result" id="verifyResult">
+                    <div class="result-icon">✓</div>
+                    <h3>Product Verified!</h3>
+                    <p>This product is 100% authentic</p>
+                    <div class="result-details">
+                        <div class="result-row">
+                            <span>Product:</span>
+                            <span id="modalProduct">Not At All Edition</span>
+                        </div>
+                        <div class="result-row">
+                            <span>Serial:</span>
+                            <span id="modalSerial">NAA-2026-001</span>
+                        </div>
+                        <div class="result-row">
+                            <span>Verified:</span>
+                            <span id="modalTime">Just now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
