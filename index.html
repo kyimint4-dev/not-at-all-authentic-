@@ -52,11 +52,12 @@
             </div>
             
             <div class="product-image-container">
-                <div class="product-image-placeholder" id="threeContainer">
-                    <!-- Three.js က ဒီနေရာမှာ 3D Shirt ကိုဆွဲပေးပါမယ် -->
+                <div class="product-image-placeholder">
+                    <!-- 👇 RE_IMG.jpg ကိုသုံးထားပါတယ် -->
+                    <img src="RE_IMG.jpg" alt="RE Product" style="width:70%; height:70%; object-fit:contain; margin:auto; display:block; border-radius:8px;">
+                    <div class="image-overlay"></div>
                 </div>
                 <div class="image-actions">
-                    <button class="action-btn" id="rotateBtn">🔄</button>
                     <button class="action-btn" id="zoomBtn">🔍</button>
                 </div>
             </div>
@@ -179,8 +180,6 @@
         </div>
     </div>
 
-    <!-- Three.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
